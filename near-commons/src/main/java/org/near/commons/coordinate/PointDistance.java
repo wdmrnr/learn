@@ -2,6 +2,7 @@ package org.near.commons.coordinate;
 
 /**
  * 坐标点计算
+ * 
  * @author wdmrnr
  *
  */
@@ -11,6 +12,7 @@ public class PointDistance {
 
 	/**
 	 * 根据两个坐标点的经纬度 获取两点间的米数
+	 * 
 	 * @param lng1
 	 * @param lat1
 	 * @param lng2
