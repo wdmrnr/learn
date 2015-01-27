@@ -10,10 +10,25 @@
 
 	</modules>
 
+	<properties>
+		<!-- Plugin的属性定义 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<near-commons-version>0.0.1</near-commons-version>
+	</properties>
+
 	<!-- 包含的字库 子项目使用是无需提供版本好 -->
 	<dependencyManagement>
 		<dependencies>
 
 		</dependencies>
 	</dependencyManagement>
+
+	<!-- 默认公共引用包 -->
+	<dependencies>
+		<dependency>
+			<groupId>near</groupId>
+			<artifactId>near-commons</artifactId>
+			<version>${near-commons-version}</version>
+		</dependency>
+	</dependencies>
 </project>
