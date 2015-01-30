@@ -115,10 +115,10 @@
       <version>${fastjson-lib.version}</version>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>com.oracle.jdbc</groupId>
       <artifactId>com.springsource.oracle.jdbc</artifactId>
       <version>10.2.0.2</version>
-    </dependency>
+    </dependency> -->
   </dependencies>
 </project>
