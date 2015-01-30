@@ -16,7 +16,7 @@ import org.hibernate.criterion.CriteriaSpecification;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.transform.Transformers;
-import org.near.commons.dao.GenericBaseDAO;
+import org.near.commons.dao.IGenericBaseDAO;
 import org.near.commons.query.HqlSearchBean;
 import org.near.commons.query.SearchBean;
 import org.near.commons.query.SqlSearchBean;
@@ -36,9 +36,9 @@ import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
-@Repository("genericBaseDao")
-public class GenericBaseDAOImpl<PK extends Serializable> implements
-    GenericBaseDAO<PK> {
+@Repository
+public class GenericBaseDAO<PK extends Serializable> implements
+    IGenericBaseDAO<PK> {
 
   protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
 

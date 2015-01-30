@@ -3,22 +3,22 @@ package org.near.commons.service.impl;
 import java.io.Serializable;
 import java.util.List;
 
-import org.near.commons.dao.GenericBaseDAO;
-import org.near.commons.service.GenericService;
+import org.near.commons.dao.IGenericBaseDAO;
+import org.near.commons.service.IGenericService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service("genericService")
+@Service
 @Transactional
-public class GenericServiceImpl<PK extends Serializable> implements GenericService<PK>{
+public class GenericService<PK extends Serializable> implements IGenericService<PK>{
 
   protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
 
   @Autowired
-  protected GenericBaseDAO<PK> genericBaseDao;
+  protected IGenericBaseDAO<PK> genericBaseDao;
 
   @Override
   public <T> PK save(T entity) {

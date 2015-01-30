@@ -3,7 +3,7 @@ package org.near.commons.service;
 import java.io.Serializable;
 import java.util.List;
 
-public interface GenericService<PK extends Serializable>{
+public interface IGenericService<PK extends Serializable>{
   public <T> PK save(T entity);
 
   public <T> void batchSave(List<T> entitys);

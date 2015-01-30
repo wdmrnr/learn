@@ -11,11 +11,11 @@
   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd"
   default-autowire="byName" default-lazy-init="false">
 
-  <!-- 自动扫描dao和service包(自动注入)-->
-  <context:component-scan base-package="org.near.commons.dao.*" />
-  <context:component-scan base-package="org.near.commons.service.*" />
+  <!-- 自动扫描dao和service包(自动注入) -->
+  <context:component-scan base-package="org.near.*.dao.*" />
+  <context:component-scan base-package="org.near.*.service.*" />
 
-  <!-- 加载service,此时要排除要controller,因为controller已经spring-mvc中加载过了
+  <!-- 加载service ,此时要排除要controller,因为controller已经spring-mvc中加载过了
   <context:component-scan base-package="org.near.web.*">
     <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
   </context:component-scan>

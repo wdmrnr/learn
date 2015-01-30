@@ -8,7 +8,7 @@ import java.util.Map;
 import org.hibernate.Session;
 import org.hibernate.criterion.DetachedCriteria;
 
-public interface GenericBaseDAO<PK extends Serializable> {
+public interface IGenericBaseDAO<PK extends Serializable> {
 
 
   public <T> PK save(T entity);
