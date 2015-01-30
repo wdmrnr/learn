@@ -10,14 +10,20 @@
     <module>near-web</module>
     <module>near-push</module>
     <module>near-order</module>
+    <module>near-commons</module>
+    <module>near-user</module>
   </modules>
 
   <properties>
     <!-- Plugin的属性定义 -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <near-commons-version>0.0.1</near-commons-version>
     <slf4j.version>1.7.10</slf4j.version>
+    <log4j.version>1.2.16</log4j.version>
     <spring.test.version>3.2.12.RELEASE</spring.test.version>
+
+    <spring.version>3.2.3.RELEASE</spring.version>
+
+    <jodd.version>3.3.7</jodd.version>
   </properties>
 
   <!-- 包含的字库 子项目使用是无需提供版本好 -->
@@ -34,18 +40,34 @@
         <artifactId>near-push</artifactId>
         <version>0.0.1</version>
       </dependency>
+      <dependency>
+        <groupId>near</groupId>
+        <artifactId>near-order</artifactId>
+        <version>0.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>near</groupId>
+        <artifactId>near-commons</artifactId>
+        <version>0.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>near</groupId>
+        <artifactId>near-user</artifactId>
+        <version>0.0.1</version>
+      </dependency>
     </dependencies>
+
   </dependencyManagement>
 
   <!-- 默认公共引用包 -->
   <dependencies>
+    <!-- 工具包 -->
     <dependency>
-      <groupId>near</groupId>
-      <artifactId>near-commons</artifactId>
-      <version>${near-commons-version}</version>
-      <type>jar</type>
+      <groupId>org.jodd</groupId>
+      <artifactId>jodd</artifactId>
+      <version>${jodd.version}</version>
     </dependency>
-     <!-- slf4j -->
+    <!-- slf4j -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
@@ -56,11 +78,23 @@
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
+    <!-- log4j -->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.7</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
@@ -70,27 +104,10 @@
     </dependency>
   </dependencies>
 
- <!--  <build>
-    <pluginManagement>
-      <plugins>
-         <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-             <artifactId>maven-resources-plugin</artifactId>
-             <version>2.6</version>
-             <configuration>
-                 <encoding>UTF-8</encoding>
-             </configuration>
-         </plugin>
-
-         <plugin>
-             <groupId>org.apache.maven.plugins</groupId>
-             <artifactId>maven-compiler-plugin</artifactId>
-             <version>2.5.1</version>
-             <configuration>
-                 <encoding>UTF-8</encoding>
-             </configuration>
-         </plugin>
-      </plugins>
-    </pluginManagement>
-  </build> -->
+  <!-- <build> <pluginManagement> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId> <version>2.6</version> <configuration>
+    <encoding>UTF-8</encoding> </configuration> </plugin> <plugin> <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId> <version>2.5.1</version> <configuration>
+    <encoding>UTF-8</encoding> </configuration> </plugin> </plugins> </pluginManagement>
+    </build> -->
 </project>

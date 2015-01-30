@@ -71,13 +71,6 @@
       </exclusions>
     </dependency>
 
-    <!-- log4j -->
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>${log4j.version}</version>
-    </dependency>
-
     <!-- commons-beanutils -->
     <dependency>
       <groupId>commons-beanutils</groupId>

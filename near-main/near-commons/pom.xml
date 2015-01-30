@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>near</groupId>
+    <artifactId>near-main</artifactId>
+    <version>0.0.1</version>
+  </parent>
+  <artifactId>near-commons</artifactId>
+  <packaging>jar</packaging>
+  <properties>
+
+    <hibernate.version>4.1.0.Final</hibernate.version>
+    <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
+
+    <slf4j.version>1.6.1</slf4j.version>
+    <jackson.version>1.9.13</jackson.version>
+
+
+    <cglib.version>2.2</cglib.version>
+
+    <ant.version>1.6.5</ant.version>
+    <antlr.version>3.3</antlr.version>
+    <dom4j.version>1.6.1</dom4j.version>
+
+    <commons-lang3.version>3.1</commons-lang3.version>
+    <commons-logging.version>1.0.4</commons-logging.version>
+    <commons-logging-api.version>1.1</commons-logging-api.version>
+    <ehcache.version>2.4.3</ehcache.version>
+
+    <javassist.version>3.15.0-GA</javassist.version>
+
+    <!-- 数据库组件包 -->
+    <druid.version>0.2.9</druid.version>
+    <fastjson-lib.version>1.1.37</fastjson-lib.version>
+  </properties>
+  <dependencies>
+    <!-- <dependency> <groupId>org.apache.httpcomponents</groupId> <artifactId>httpclient</artifactId>
+      <version>4.3.5</version> </dependency> -->
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>4.2.3.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-proxool</artifactId>
+      <version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.common</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+      <version>4.0.2.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
+      <version>1.0.1.Final</version>
+    </dependency>
+
+    <!-- JSR303 Bean Validator -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>${hibernate-validator.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator-annotation-processor</artifactId>
+      <version>${hibernate-validator.version}</version>
+    </dependency>
+
+    <!-- JSON begin -->
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- 数据库组件包 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson-lib.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.oracle.jdbc</groupId>
+      <artifactId>com.springsource.oracle.jdbc</artifactId>
+      <version>10.2.0.2</version>
+    </dependency>
+  </dependencies>
+</project>

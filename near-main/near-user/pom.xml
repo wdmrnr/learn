@@ -6,7 +6,7 @@
     <artifactId>near-main</artifactId>
     <version>0.0.1</version>
   </parent>
-  <artifactId>near-order</artifactId>
+  <artifactId>near-user</artifactId>
 
   <dependencies>
     <dependency>
